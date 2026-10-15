@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Instruction text from the template (italic). Delete every \instr{...}
+% before submission, or set \showinstructions to false to hide them all.
+\newif\ifshowinstructions
+\showinstructionstrue
+% \showinstructionsfalse  % <- uncomment to hide all instructions at once
+\newcommand{\instr}[1]{\ifshowinstructions\textit{#1}\fi}
+
+% Bullet lists matching the template's style
+\setlist[itemize]{leftmargin=1.5em, itemsep=3pt}
+
+% Section headings: "1: DESCRIBE THE PROBLEM" style
+\renewcommand{\thesection}{\arabic{section}:}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\scshape}{\thesection}{0.5em}{\MakeUppercase}
+\titleformat{\subsection}{\normalfont\bfseries}{}{0em}{\MakeUppercase}
+
+\begin{document}
+
+% ---------- Title ----------
+\begin{center}
+  {\LARGE\bfseries [Spam Detector]}\\[0.6em]
+  {\large [Erik Lloyd Augustson], [...]}
+\end{center}
+\medskip
+\noindent\textbf{Maximum number of words: 3500}
+
+% ---------- 1 ----------
+\section{The problem we're trying to solve is the automatic detection of spam messages.}
+
+\subsection*{Scope}
+
+
+\instr{The goal is to make a model that can differeciate between a regular message,
+and a spam one, typically some advertisement or malicious message. The system 
+would for example be used in iMessage, Disocord, WhatsApp, exc. and ran locally for privacy 
+reasons. Some of these examples have equivalent soutions already. Without machine learning, this 
+this task is extremely impractical to solve. I cant really see any other way to solve this, than 
+having someone manually look over texts and decide if they are spam or not.
+}
+
+
+
+
+\subsection*{Metrics}
+
+\instr{Describe how the performance will be measured.}
+
+
+% ---------- 2 ----------
+\section{Data}
+
+
+% ---------- 3 ----------
+\section{Modeling}
+
+% ---------- 4 ----------
+\section{Deployment}
+
+% ---------- 5 ----------
+\section{References}
+
+
+\begin{thebibliography}{9}
+  % \bibitem{key} Author, \textit{Title}, Year. \url{https://...}
+\end{thebibliography}
+
+\end{document}
